@@ -2,7 +2,7 @@
 
 This is a script for downloading videos from X (formerly Twitter).
 
-Japan [here]()
+Japan [here](https://github.com/kaedeek/twitter_video_download/blob/main/README-ja.md)
 
 ## Usage
 

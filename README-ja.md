@@ -2,7 +2,7 @@
 
 X（旧Twitter）の動画をダウンロードするためのスクリプトです。
 
-English [こちら]()
+English [here](https://github.com/kaedeek/twitter_video_download/blob/main/README.md)
 
 ## 使い方
 
