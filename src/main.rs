@@ -12,7 +12,7 @@ fn main() {
         false,                    // notice
         false,                    // warning
         vec![],                   // prefix (Vec<String>)
-        false,                    // error (bool)
+        false,                    // error
     );
 
     let args: Vec<String> = env::args().collect();
@@ -22,8 +22,17 @@ fn main() {
         return;
     }
 
-    let url = &args[1];
-    if !url.contains("x.com") {
+    let mut url = args[1].clone();
+
+    // ✅ x.com / twitter.com / 埋め込みURL対応
+    if url.contains("x.com") || url.contains("twitter.com") {
+        url = url
+            .replace("mobile.twitter.com", "x.com")
+            .replace("twitter.com", "x.com")
+            .replace("https://www.x.com", "https://x.com")
+            .replace("https://fxtwitter.com", "https://x.com")
+            .replace("https://fixupx.com", "https://x.com");
+    } else {
         logger.error("Invalid URL", &[]);
         return;
     }
@@ -38,7 +47,7 @@ fn main() {
             "best[ext=mp4]",
             "-o",
             "%(title)s.%(ext)s",
-            url,
+            &url,
         ])
         .status();
 
