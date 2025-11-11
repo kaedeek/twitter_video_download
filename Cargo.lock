@@ -4,9 +4,9 @@ version = 4
 
 [[package]]
 name = "VersaLogrs"
-version = "1.6.2"
+version = "1.6.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7a8d81892fe588d919a699bc4d0b197a6c5be323e7db16fb59d03437e8ed229a"
+checksum = "27174af484a236fbbb2b55e9c3757324a4f84e4da3a32271e5e44d4a422c95a2"
 dependencies = [
  "backtrace",
  "chrono",

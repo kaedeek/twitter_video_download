@@ -4,5 +4,5 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-VersaLogrs = "1.6.2"
+VersaLogrs = "1.6.8"
 pyo3 = { version = "0.26.0", features = ["auto-initialize"] }
